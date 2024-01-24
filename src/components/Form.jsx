@@ -42,13 +42,14 @@ const Form = (props) => {
     
     return(
         <>
-        <form onSubmit={handleSubmit}>
-            <input type="text" value={name} onChange={e=> setName(e.target.value)} />
-            <button>Add</button>
-        </form>
-        {todos.map(todo => {
-            return <ToDo key={todo.id} todo={todo} dispatch={dispatch} />
-        })}
+            <form onSubmit={handleSubmit}>
+                <input type="text" value={name} onChange={e=> setName(e.target.value)} />
+                <button>Add</button>
+            </form>
+            
+            {todos.map(todo => {
+                return <ToDo key={todo.id} todo={todo} dispatch={dispatch} />
+            })}
         </>
     )
 }
